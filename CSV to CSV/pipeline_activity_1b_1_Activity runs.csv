@@ -1,0 +1,126 @@
+Activity name,Activity status,Error,Run start,Duration,Input,Output
+Copy_y0q,Succeeded,,"12/15/2024, 10:48:03 AM",48s,"{
+    ""source"": {
+        ""type"": ""DelimitedTextSource"",
+        ""storeSettings"": {
+            ""type"": ""AzureBlobStorageReadSettings"",
+            ""recursive"": true,
+            ""enablePartitionDiscovery"": false
+        },
+        ""formatSettings"": {
+            ""type"": ""DelimitedTextReadSettings"",
+            ""skipLineCount"": 0
+        },
+        ""datasetSettings"": {
+            ""annotations"": [],
+            ""type"": ""DelimitedText"",
+            ""typeProperties"": {
+                ""location"": {
+                    ""type"": ""AzureBlobStorageLocation"",
+                    ""folderPath"": ""1b"",
+                    ""container"": ""perftest""
+                },
+                ""columnDelimiter"": "","",
+                ""escapeChar"": ""\\"",
+                ""firstRowAsHeader"": true,
+                ""quoteChar"": ""\""""
+            },
+            ""schema"": [],
+            ""externalReferences"": {
+                ""connection"": ""aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa""
+            }
+        }
+    },
+    ""sink"": {
+        ""type"": ""DelimitedTextSink"",
+        ""storeSettings"": {
+            ""type"": ""LakehouseWriteSettings"",
+            ""copyBehavior"": ""PreserveHierarchy""
+        },
+        ""formatSettings"": {
+            ""type"": ""DelimitedTextWriteSettings"",
+            ""quoteAllText"": true,
+            ""fileExtension"": "".txt""
+        },
+        ""datasetSettings"": {
+            ""annotations"": [],
+            ""linkedService"": {
+                ""name"": ""pipeline_activity_1b_1"",
+                ""properties"": {
+                    ""annotations"": [],
+                    ""type"": ""Lakehouse"",
+                    ""typeProperties"": {
+                        ""workspaceId"": ""aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"",
+                        ""artifactId"": ""aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"",
+                        ""rootFolder"": ""Files""
+                    }
+                }
+            },
+            ""type"": ""DelimitedText"",
+            ""typeProperties"": {
+                ""location"": {
+                    ""type"": ""LakehouseLocation""
+                },
+                ""columnDelimiter"": "","",
+                ""escapeChar"": ""\\"",
+                ""firstRowAsHeader"": true,
+                ""quoteChar"": ""\""""
+            },
+            ""schema"": []
+        }
+    },
+    ""enableStaging"": false,
+    ""translator"": {
+        ""type"": ""TabularTranslator"",
+        ""typeConversion"": true,
+        ""typeConversionSettings"": {
+            ""allowDataTruncation"": true,
+            ""treatBooleanAsNumber"": false
+        }
+    }
+}","{
+    ""dataRead"": 208623548870,
+    ""dataWritten"": 208623548870,
+    ""filesRead"": 105,
+    ""filesWritten"": 105,
+    ""filesSkipped"": 0,
+    ""copyDuration"": 45,
+    ""throughput"": 5349322,
+    ""azCopyCommand"": true,
+    ""errors"": [],
+    ""usedDataIntegrationUnits"": 256,
+    ""usedParallelCopies"": 256,
+    ""executionDetails"": [
+        {
+            ""source"": {
+                ""type"": ""AzureBlobStorage"",
+                ""region"": ""East US 2""
+            },
+            ""sink"": {
+                ""type"": ""Lakehouse""
+            },
+            ""status"": ""Succeeded"",
+            ""start"": ""12/15/2024, 10:48:04 AM"",
+            ""duration"": 45,
+            ""usedDataIntegrationUnits"": 256,
+            ""usedParallelCopies"": 256,
+            ""profile"": {
+                ""queue"": {
+                    ""status"": ""Completed"",
+                    ""duration"": 5
+                },
+                ""transfer"": {
+                    ""status"": ""Completed"",
+                    ""duration"": 39
+                }
+            },
+            ""detailedDurations"": {
+                ""queuingDuration"": 5,
+                ""transferDuration"": 39
+            }
+        }
+    ],
+    ""dataConsistencyVerification"": {
+        ""VerificationResult"": ""Unsupported""
+    }
+}"

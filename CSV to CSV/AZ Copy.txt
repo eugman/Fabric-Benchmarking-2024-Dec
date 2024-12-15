@@ -1,0 +1,16 @@
+$env:AZCOPY_CRED_TYPE = "OAuthToken";
+$env:AZCOPY_CONCURRENCY_VALUE = "AUTO";
+./azcopy login;
+./azcopy.exe copy "E:\OUT\*" "https://onelake.blob.fabric.microsoft.com/{workspace name}/storage_explorer_1b_1.Lakehouse/Files/" --overwrite=prompt --from-to=LocalBlob --blob-type BlockBlob --follow-symlinks --check-length=true --put-md5 --follow-symlinks --disable-auto-decoding=false --list-of-files "C:\Users\eugene\AppData\Local\Temp\2\stg-exp-azcopy-03b96775-e9fa-48ed-86c6-2f156655851b.txt" --recursive --trusted-microsoft-suffixes=onelake.blob.fabric.microsoft.com --log-level=INFO;
+./azcopy logout;
+$env:AZCOPY_CRED_TYPE = "";
+$env:AZCOPY_CONCURRENCY_VALUE = "";
+
+$env:AZCOPY_CRED_TYPE = "OAuthToken";
+$env:AZCOPY_CONCURRENCY_VALUE = "AUTO";
+./azcopy login;
+./azcopy.exe copy "E:\OUT\sales\" "https://onelake.blob.fabric.microsoft.com/{workspace name}/storage_explorer_1b_1.Lakehouse/Files/" --overwrite=prompt --from-to=LocalBlob --blob-type BlockBlob --follow-symlinks --check-length=true --put-md5 --follow-symlinks --disable-auto-decoding=false --recursive --trusted-microsoft-suffixes=onelake.blob.fabric.microsoft.com --log-level=INFO;
+./azcopy logout;
+$env:AZCOPY_CRED_TYPE = "";
+$env:AZCOPY_CONCURRENCY_VALUE = "";
+

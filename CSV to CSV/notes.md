@@ -1,0 +1,1 @@
+The default export from the storage explorer for [AZ Copy.txt](AZ Copy.txt) has [login](https://learn.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy-login) and [logout](https://learn.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy-logout) commands, but if you are doing multiple tests then it's easier to log in once and then logout when you are all done.
