@@ -1,1 +1,2 @@
 # Fabric-Benchmarking-2024-Dec
+This repo is a set of config files, logs, and scripts produced while making a series benchmarking blog posts. This repo is MIT licensed and you may do what you like with it, without any needed attribution. 
